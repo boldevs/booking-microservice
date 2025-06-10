@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "tsQwUeN5w8M=",
+  "success": true,
+  "projectFilePath": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking.Api\\Booking.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.2\\microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
+    "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
