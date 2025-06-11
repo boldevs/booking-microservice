@@ -1,9 +1,9 @@
 using System.Reflection;
-using BuildingBlocks.EventStoreDB.BackgroundWorkers;
-using BuildingBlocks.EventStoreDB.Events;
-using BuildingBlocks.EventStoreDB.Projections;
-using BuildingBlocks.EventStoreDB.Repository;
-using BuildingBlocks.EventStoreDB.Subscriptions;
+using BuldingBlock.EventStoreDB.BackgroundWorkers;
+using BuldingBlock.EventStoreDB.Events;
+using BuldingBlock.EventStoreDB.Projections;
+using BuldingBlock.EventStoreDB.Repository;
+using BuldingBlock.EventStoreDB.Subscriptions;
 using EventStore.Client;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

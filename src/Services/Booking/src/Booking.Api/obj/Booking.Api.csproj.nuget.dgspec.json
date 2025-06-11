@@ -4,14 +4,14 @@
     "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking.Api\\Booking.Api.csproj": {}
   },
   "projects": {
-    "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking.Api\\Booking.Api.csproj": {
+    "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\BuldingBlock\\BuldingBlock.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking.Api\\Booking.Api.csproj",
-        "projectName": "Booking.Api",
-        "projectPath": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking.Api\\Booking.Api.csproj",
+        "projectUniqueName": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\BuldingBlock\\BuldingBlock.csproj",
+        "projectName": "BuldingBlock",
+        "projectPath": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\BuldingBlock\\BuldingBlock.csproj",
         "packagesPath": "C:\\Users\\Vibol\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking.Api\\obj\\",
+        "outputPath": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\BuldingBlock\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",
@@ -53,6 +53,444 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "Ardalis.GuardClauses": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "AspNetCore.HealthChecks.MongoDb": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "AspNetCore.HealthChecks.UI": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "AspNetCore.HealthChecks.UI.Client": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "AspNetCore.HealthChecks.UI.InMemory.Storage": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "AspNetCore.HealthChecks.UI.SQLite.Storage": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Ben.BlockingDetector": {
+              "target": "Package",
+              "version": "[0.0.4, )"
+            },
+            "DotNetCore.CAP": {
+              "target": "Package",
+              "version": "[8.3.5, )"
+            },
+            "DotNetCore.CAP.Dashboard": {
+              "target": "Package",
+              "version": "[8.3.5, )"
+            },
+            "DotNetCore.CAP.MongoDB": {
+              "target": "Package",
+              "version": "[8.3.5, )"
+            },
+            "DotNetCore.CAP.OpenTelemetry": {
+              "target": "Package",
+              "version": "[8.3.5, )"
+            },
+            "DotNetCore.CAP.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.3.5, )"
+            },
+            "DotNetCore.CAP.SqlServer": {
+              "target": "Package",
+              "version": "[8.3.5, )"
+            },
+            "Duende.IdentityServer": {
+              "target": "Package",
+              "version": "[7.2.4, )"
+            },
+            "Duende.IdentityServer.AspNetIdentity": {
+              "target": "Package",
+              "version": "[7.2.4, )"
+            },
+            "Duende.IdentityServer.EntityFramework": {
+              "target": "Package",
+              "version": "[7.2.4, )"
+            },
+            "Duende.IdentityServer.EntityFramework.Storage": {
+              "target": "Package",
+              "version": "[7.2.4, )"
+            },
+            "EFCore.NamingConventions": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "EasyCaching.InMemory": {
+              "target": "Package",
+              "version": "[1.9.2, )"
+            },
+            "EntityFrameworkCore.Triggered": {
+              "target": "Package",
+              "version": "[3.2.2, )"
+            },
+            "EventStore.Client.Grpc.Streams": {
+              "target": "Package",
+              "version": "[23.3.9, )"
+            },
+            "Figgle": {
+              "target": "Package",
+              "version": "[0.6.2, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.1, )"
+            },
+            "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.71.0, )"
+            },
+            "Hellang.Middleware.ProblemDetails": {
+              "target": "Package",
+              "version": "[6.5.1, )"
+            },
+            "Humanizer.Core": {
+              "target": "Package",
+              "version": "[2.14.1, )"
+            },
+            "IdGen": {
+              "target": "Package",
+              "version": "[3.0.7, )"
+            },
+            "Jaeger": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "MagicOnion": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "MagicOnion.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "MagicOnion.Client": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "MagicOnion.Server": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
+            "Mapster.DependencyInjection": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.4.1, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.4.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Extensions.Diagnostics.HealthChecks": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Extensions.Http.Polly": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.Extensions.PlatformAbstractions": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.VisualStudio.Threading.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[17.14.15, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "OpenTelemetry": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTelemetry.Contrib.Instrumentation.MassTransit": {
+              "target": "Package",
+              "version": "[1.0.0-beta2, )"
+            },
+            "OpenTelemetry.Exporter.Jaeger": {
+              "target": "Package",
+              "version": "[1.5.1, )"
+            },
+            "OpenTelemetry.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTelemetry.Instrumentation.AspNetCore": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTelemetry.Instrumentation.Http": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTracing": {
+              "target": "Package",
+              "version": "[0.12.1, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.5.2, )"
+            },
+            "Scrutor": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Scrutor.AspNetCore": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog.Enrichers.Span": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Serilog.Formatting.Elasticsearch": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Serilog.Sinks.Elasticsearch": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Serilog.Sinks.SpectreConsole": {
+              "target": "Package",
+              "version": "[0.3.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[8.1.4, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[8.1.4, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[8.1.4, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[8.1.4, )"
+            },
+            "System.Interactive.Async": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "prometheus-net": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            },
+            "prometheus-net.AspNetCore": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            },
+            "protobuf-net.BuildTools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.52, )"
+            },
+            "protobuf-net.Grpc": {
+              "target": "Package",
+              "version": "[1.2.2, )"
+            },
+            "protobuf-net.Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[1.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking.Api\\Booking.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking.Api\\Booking.Api.csproj",
+        "projectName": "Booking.Api",
+        "projectPath": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking.Api\\Booking.Api.csproj",
+        "packagesPath": "C:\\Users\\Vibol\\.nuget\\packages\\",
+        "outputPath": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Vibol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking\\Booking.csproj": {
+                "projectPath": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking\\Booking.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.2, )"
@@ -73,6 +511,84 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking\\Booking.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking\\Booking.csproj",
+        "projectName": "Booking",
+        "projectPath": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking\\Booking.csproj",
+        "packagesPath": "C:\\Users\\Vibol\\.nuget\\packages\\",
+        "outputPath": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Vibol\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\BuldingBlock\\BuldingBlock.csproj": {
+                "projectPath": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\BuldingBlock\\BuldingBlock.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

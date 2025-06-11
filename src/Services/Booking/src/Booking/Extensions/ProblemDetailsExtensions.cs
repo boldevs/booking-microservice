@@ -1,4 +1,4 @@
-using BuldingBlocks.Exception;
+using BuldingBlock.Exception;
 using Grpc.Core;
 using Hellang.Middleware.ProblemDetails;
 using Microsoft.AspNetCore.Http;

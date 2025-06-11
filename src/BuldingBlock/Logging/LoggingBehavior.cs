@@ -4,7 +4,6 @@ using Microsoft.Extensions.Logging;
 
 namespace BuldingBlock.Logging
 {
-
     public class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
         where TRequest : notnull, IRequest<TResponse>
         where TResponse : notnull
@@ -18,29 +17,34 @@ namespace BuldingBlock.Logging
 
         public async Task<TResponse> Handle(
             TRequest request,
-            CancellationToken cancellationToken,
-            RequestHandlerDelegate<TResponse> next)
+            RequestHandlerDelegate<TResponse> next,
+            CancellationToken cancellationToken)
         {
             const string prefix = nameof(LoggingBehavior<TRequest, TResponse>);
 
-            _logger.LogInformation("[{Prefix}] Handle request={X-RequestData} and response={X-ResponseData}",
-                prefix, typeof(TRequest).Name, typeof(TResponse).Name);
+            var requestType = typeof(TRequest).Name;
+            var responseType = typeof(TResponse).Name;
 
-            var timer = new Stopwatch();
-            timer.Start();
+            _logger.LogInformation("[{Prefix}] Handling request {RequestType} and expecting response {ResponseType}",
+                prefix, requestType, responseType);
+
+            var timer = Stopwatch.StartNew();
 
             var response = await next();
 
             timer.Stop();
-            var timeTaken = timer.Elapsed;
-            if (timeTaken.Seconds > 3) // if the request is greater than 3 seconds, then log the warnings
-                _logger.LogWarning("[{Perf-Possible}] The request {X-RequestData} took {TimeTaken} seconds.",
-                    prefix, typeof(TRequest).Name, timeTaken.Seconds);
+            var elapsedSeconds = timer.Elapsed.TotalSeconds;
 
-            _logger.LogInformation("[{Prefix}] Handled {X-RequestData}", prefix, typeof(TRequest).Name);
+            if (elapsedSeconds > 3)
+            {
+                _logger.LogWarning("[{Prefix}] The request {RequestType} took {ElapsedSeconds:N2} seconds, which exceeds the threshold.",
+                    prefix, requestType, elapsedSeconds);
+            }
+
+            _logger.LogInformation("[{Prefix}] Handled request {RequestType} in {ElapsedSeconds:N2} seconds.",
+                prefix, requestType, elapsedSeconds);
+
             return response;
         }
     }
-
-
 }

@@ -1,3 +1,7 @@
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Conventions;
+using MongoDB.Driver;
+
 namespace BuldingBlock.Mongo
 {
     // https://www.thecodebuzz.com/mongodb-repository-implementation-unit-testing-net-core-example/

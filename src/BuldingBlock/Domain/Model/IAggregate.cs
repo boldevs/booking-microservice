@@ -1,5 +1,5 @@
-using BuildingBlocks.Domain.Event;
-using BuildingBlocks.EventStoreDB.Events;
+using BuldingBlock.Domain.Event;
+using BuldingBlock.EventStoreDB.Events;
 
 namespace BuldingBlock.Domain.Model
 {

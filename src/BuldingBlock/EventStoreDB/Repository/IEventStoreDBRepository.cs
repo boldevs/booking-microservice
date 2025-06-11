@@ -1,6 +1,6 @@
-using BuildingBlocks.Domain.Model;
-using BuildingBlocks.EventStoreDB.Events;
-using BuildingBlocks.EventStoreDB.Serialization;
+using BuldingBlock.Domain.Model;
+using BuldingBlock.EventStoreDB.Events;
+using BuldingBlock.EventStoreDB.Serialization;
 using EventStore.Client;
 
 namespace BuldingBlock.EventStoreDB.Repository

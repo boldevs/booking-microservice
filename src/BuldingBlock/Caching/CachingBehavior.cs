@@ -5,52 +5,55 @@ using Microsoft.Extensions.Logging;
 namespace BuldingBlock.Caching
 {
     public class CachingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-    where TRequest : notnull, IRequest<TResponse>
-    where TResponse : notnull
+        where TRequest : notnull, IRequest<TResponse>
+        where TResponse : notnull
     {
-        private readonly ICacheRequest _cacheRequest;
         private readonly IEasyCachingProvider _cachingProvider;
         private readonly ILogger<CachingBehavior<TRequest, TResponse>> _logger;
-        private readonly int defaultCacheExpirationInHours = 1;
+        private readonly int _defaultCacheExpirationInHours = 1;
 
-        public CachingBehavior(IEasyCachingProviderFactory cachingFactory,
-            ILogger<CachingBehavior<TRequest, TResponse>> logger,
-            ICacheRequest cacheRequest)
+        public CachingBehavior(
+            IEasyCachingProviderFactory cachingFactory,
+            ILogger<CachingBehavior<TRequest, TResponse>> logger)
         {
             _logger = logger;
             _cachingProvider = cachingFactory.GetCachingProvider("mem");
-            _cacheRequest = cacheRequest;
         }
 
-
-        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken,
-            RequestHandlerDelegate<TResponse> next)
+        public async Task<TResponse> Handle(
+            TRequest request,
+            RequestHandlerDelegate<TResponse> next,
+            CancellationToken cancellationToken)
         {
-            if (request is not ICacheRequest || _cacheRequest == null)
-                // No cache request found, so just continue through the pipeline
-                return await next();
-
-            var cacheKey = _cacheRequest.CacheKey;
-            var cachedResponse = await _cachingProvider.GetAsync<TResponse>(cacheKey);
-            if (cachedResponse.Value != null)
+            // Check if the request is a cacheable one
+            if (request is not ICacheRequest cacheRequest)
             {
-                _logger.LogDebug("Response retrieved {TRequest} from cache. CacheKey: {CacheKey}",
-                    typeof(TRequest).FullName, cacheKey);
+                return await next();
+            }
+
+            var cacheKey = cacheRequest.CacheKey;
+
+            // Try to get the response from cache
+            var cachedResponse = await _cachingProvider.GetAsync<TResponse>(cacheKey, cancellationToken);
+            if (cachedResponse.HasValue)
+            {
+                _logger.LogDebug("Cache hit for {TRequest}. CacheKey: {CacheKey}", typeof(TRequest).FullName, cacheKey);
                 return cachedResponse.Value;
             }
 
+            // Proceed with the actual handler
             var response = await next();
 
-            var expirationTime = _cacheRequest.AbsoluteExpirationRelativeToNow ??
-                                 DateTime.Now.AddHours(defaultCacheExpirationInHours);
+            // Determine expiration
+            var expiration = cacheRequest.AbsoluteExpirationRelativeToNow ??
+                             TimeSpan.FromHours(_defaultCacheExpirationInHours);
 
-            await _cachingProvider.SetAsync(cacheKey, response, expirationTime.TimeOfDay);
+            // Cache the response
+            await _cachingProvider.SetAsync(cacheKey, response, expiration, cancellationToken);
 
-            _logger.LogDebug("Caching response for {TRequest} with cache key: {CacheKey}", typeof(TRequest).FullName,
-                cacheKey);
+            _logger.LogDebug("Cached response for {TRequest}. CacheKey: {CacheKey}", typeof(TRequest).FullName, cacheKey);
 
             return response;
         }
     }
-
 }

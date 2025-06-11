@@ -1,4 +1,4 @@
-using BuildingBlocks.Domain.Event;
+using BuldingBlock.Domain.Event;
 using MediatR;
 
 namespace BuldingBlock.EventStoreDB.Events

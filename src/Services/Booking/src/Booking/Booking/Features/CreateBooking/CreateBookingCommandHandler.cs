@@ -1,5 +1,5 @@
 using Ardalis.GuardClauses;
-using BuldingBlock.Booking.Exceptions;
+using Booking.Booking.Exceptions;
 using Booking.Booking.Models.ValueObjects;
 using Booking.Configuration;
 using BuldingBlock.Contracts.Grpc;

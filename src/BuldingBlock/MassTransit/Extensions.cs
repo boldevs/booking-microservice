@@ -1,6 +1,6 @@
 using System.Reflection;
-using BuildingBlocks.Domain.Event;
-using BuildingBlocks.Utils;
+using BuldingBlock.Domain.Event;
+using BuldingBlock.Utils;
 using Humanizer;
 using MassTransit;
 using Microsoft.AspNetCore.Hosting;

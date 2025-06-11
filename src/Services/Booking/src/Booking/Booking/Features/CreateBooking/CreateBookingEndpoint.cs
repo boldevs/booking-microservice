@@ -1,4 +1,4 @@
-using BuldingBlocks.Web;
+using BuldingBlock.Web;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
