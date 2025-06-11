@@ -1,5 +1,5 @@
-using BuildingBlocks.Domain.Model;
-using BuildingBlocks.Exception;
+using BuldingBlock.Domain.Model;
+using BuldingBlock.Exception;
 
 namespace BuldingBlock.EventStoreDB.Repository
 {

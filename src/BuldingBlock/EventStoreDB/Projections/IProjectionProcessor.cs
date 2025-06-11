@@ -1,4 +1,4 @@
-using BuildingBlocks.EventStoreDB.Events;
+using BuldingBlock.EventStoreDB.Events;
 using MediatR;
 
 namespace BuldingBlock.EventStoreDB.Projections

@@ -1,3 +1,7 @@
+using Booking.Booking.Events.Domain;
+using Booking.Booking.Models.ValueObjects;
+using BuldingBlock.Domain.Model;
+
 namespace Booking.Booking.Models
 {
     public class Booking : Aggregate<long>

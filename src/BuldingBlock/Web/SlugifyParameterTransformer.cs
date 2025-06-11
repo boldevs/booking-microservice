@@ -1,15 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Routing;
 
 namespace BuldingBlock.Web
 {
-    public string TransformOutbound(object value)
+    public class SlugifyParameterTransformer : IOutboundParameterTransformer
     {
-        // Slugify value
-        return value == null
-            ? null
-            : Regex.Replace(value.ToString() ?? string.Empty, "([a-z])([A-Z])", "$1-$2").ToLower();
+        public string TransformOutbound(object value)
+        {
+            // Slugify value
+            return value == null
+                ? null
+                : Regex.Replace(value.ToString() ?? string.Empty, "([a-z])([A-Z])", "$1-$2").ToLower();
+        }
     }
 }
+

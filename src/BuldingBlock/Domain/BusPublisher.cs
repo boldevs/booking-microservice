@@ -1,6 +1,6 @@
 using System.Security.Claims;
-using BuildingBlocks.Domain.Event;
-using BuildingBlocks.Web;
+using BuldingBlock.Domain.Event;
+using BuldingBlock.Web;
 using MassTransit;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;

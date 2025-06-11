@@ -1,5 +1,5 @@
 using System.Data;
-using BuildingBlocks.Domain.Event;
+using BuldingBlock.Domain.Event;
 using Microsoft.EntityFrameworkCore;
 
 namespace BuldingBlock.EFCore

@@ -1,4 +1,4 @@
-using BuildingBlocks.Validation;
+using BuldingBlock.Validation;
 
 namespace BuldingBlock.Exception
 {

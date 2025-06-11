@@ -6,14 +6,14 @@ using Microsoft.Extensions.Logging;
 namespace BuldingBlock.EFCore
 {
     public class EfIdentityTxBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-    where TRequest : notnull, IRequest<TResponse>
-    where TResponse : notnull
+        where TRequest : notnull, IRequest<TResponse>
+        where TResponse : notnull
     {
-        private readonly ILogger<EfTxBehavior<TRequest, TResponse>> _logger;
+        private readonly ILogger<EfIdentityTxBehavior<TRequest, TResponse>> _logger;
         private readonly IDbContext _dbContextBase;
 
         public EfIdentityTxBehavior(
-            ILogger<EfTxBehavior<TRequest, TResponse>> logger,
+            ILogger<EfIdentityTxBehavior<TRequest, TResponse>> logger,
             IDbContext dbContextBase)
         {
             _logger = logger;
@@ -22,24 +22,26 @@ namespace BuldingBlock.EFCore
 
         public async Task<TResponse> Handle(
             TRequest request,
-            CancellationToken cancellationToken,
-            RequestHandlerDelegate<TResponse> next)
+            RequestHandlerDelegate<TResponse> next,
+            CancellationToken cancellationToken)
         {
+            var requestType = typeof(TRequest).FullName;
+
             _logger.LogInformation(
-                "{Prefix} Handled command {MediatrRequest}",
-                nameof(EfTxBehavior<TRequest, TResponse>),
-                typeof(TRequest).FullName);
+                "{Prefix} Handling command {RequestType}",
+                nameof(EfIdentityTxBehavior<TRequest, TResponse>),
+                requestType);
 
             _logger.LogDebug(
-                "{Prefix} Handled command {MediatrRequest} with content {RequestContent}",
-                nameof(EfTxBehavior<TRequest, TResponse>),
-                typeof(TRequest).FullName,
+                "{Prefix} Request content for {RequestType}: {RequestContent}",
+                nameof(EfIdentityTxBehavior<TRequest, TResponse>),
+                requestType,
                 JsonSerializer.Serialize(request));
 
             _logger.LogInformation(
-                "{Prefix} Open the transaction for {MediatrRequest}",
-                nameof(EfTxBehavior<TRequest, TResponse>),
-                typeof(TRequest).FullName);
+                "{Prefix} Beginning transaction for {RequestType}",
+                nameof(EfIdentityTxBehavior<TRequest, TResponse>),
+                requestType);
 
             await _dbContextBase.BeginTransactionAsync(cancellationToken);
 
@@ -48,9 +50,9 @@ namespace BuldingBlock.EFCore
                 var response = await next();
 
                 _logger.LogInformation(
-                    "{Prefix} Executed the {MediatrRequest} request",
-                    nameof(EfTxBehavior<TRequest, TResponse>),
-                    typeof(TRequest).FullName);
+                    "{Prefix} Successfully handled {RequestType}",
+                    nameof(EfIdentityTxBehavior<TRequest, TResponse>),
+                    requestType);
 
                 await _dbContextBase.CommitTransactionAsync(cancellationToken);
 
@@ -63,5 +65,4 @@ namespace BuldingBlock.EFCore
             }
         }
     }
-
 }

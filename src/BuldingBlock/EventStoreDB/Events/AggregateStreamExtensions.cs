@@ -1,4 +1,4 @@
-using BuildingBlocks.EventStoreDB.Serialization;
+using BuldingBlock.EventStoreDB.Serialization;
 using EventStore.Client;
 
 namespace BuldingBlock.EventStoreDB.Events

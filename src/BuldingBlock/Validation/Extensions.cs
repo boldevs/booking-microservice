@@ -1,4 +1,4 @@
-using BuildingBlocks.Exception;
+using BuldingBlock.Exception;
 using FluentValidation;
 
 namespace BuldingBlock.Validation

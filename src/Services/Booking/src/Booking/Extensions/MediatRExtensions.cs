@@ -1,6 +1,6 @@
-using BuildingBlocks.EFCore;
-using BuildingBlocks.Logging;
-using BuildingBlocks.Validation;
+using BuldingBlock.EFCore;
+using BuldingBlock.Logging;
+using BuldingBlock.Validation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 

@@ -1,20 +1,31 @@
-using BuildingBlocks.Utils;
-using BuildingBlocks.Web;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration; // 👈 Required for IConfiguration
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
+using BuldingBlock.Utils;
+using BuldingBlock.Web;
+
 
 namespace BuldingBlock.OpenTelemetry
 {
-    public static IServiceCollection AddCustomOpenTelemetry(this IServiceCollection services)
+    public static class Extensions
     {
-        services.AddOpenTelemetryTracing(builder => builder
-            .AddMassTransitInstrumentation()
-            .AddAspNetCoreInstrumentation()
-            .AddHttpClientInstrumentation()
-            .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService(services.GetOptions<AppOptions>("AppOptions").Name))
-            .AddJaegerExporter());
+        public static IServiceCollection AddCustomOpenTelemetry(this IServiceCollection services)
+        {
+            var serviceProvider = services.BuildServiceProvider();
+            var appName = serviceProvider
+                .GetRequiredService<IConfiguration>()
+                .GetSection("AppOptions")["Name"] ?? "BookingService";
 
-        return services;
+            services.AddOpenTelemetry()
+                .WithTracing(builder => builder
+                    .SetResourceBuilder(ResourceBuilder.CreateDefault().AddService(appName))
+                    .AddAspNetCoreInstrumentation()
+                    .AddHttpClientInstrumentation()
+                    .AddMassTransitInstrumentation()
+                    .AddJaegerExporter());
+
+            return services;
+        }
     }
 }

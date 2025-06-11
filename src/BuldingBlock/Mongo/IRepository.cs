@@ -1,27 +1,15 @@
 using System.Linq.Expressions;
-using BuildingBlocks.Domain.Model;
+using BuldingBlock.Domain.Model;
 
 namespace BuldingBlock.Mongo
 {
     public interface IReadRepository<TEntity, in TId>
-    where TEntity : class, IEntity<TId>
+        where TEntity : class, IEntity<TId>
     {
         Task<TEntity?> FindByIdAsync(TId id, CancellationToken cancellationToken = default);
-
-        Task<TEntity?> FindOneAsync(
-            Expression<Func<TEntity, bool>> predicate,
-            CancellationToken cancellationToken = default);
-
-        Task<IReadOnlyList<TEntity>> FindAsync(
-            Expression<Func<TEntity, bool>> predicate,
-            CancellationToken cancellationToken = default);
-
+        Task<TEntity?> FindOneAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default);
+        Task<IReadOnlyList<TEntity>> FindAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default);
         Task<IReadOnlyList<TEntity>> GetAllAsync(CancellationToken cancellationToken = default);
-
-        public Task<IReadOnlyList<TEntity>> RawQuery(
-            string query,
-            CancellationToken cancellationToken = default,
-            params object[] queryParams);
     }
 
     public interface IWriteRepository<TEntity, in TId>

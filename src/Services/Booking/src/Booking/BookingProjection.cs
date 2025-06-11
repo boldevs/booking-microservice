@@ -1,7 +1,7 @@
 using Booking.Booking.Events.Domain;
 using Booking.Data;
-using BuldingBlocks.EventStoreDB.Events;
-using BuldingBlocks.EventStoreDB.Projections;
+using BuldingBlock.EventStoreDB.Events;
+using BuldingBlock.EventStoreDB.Projections;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

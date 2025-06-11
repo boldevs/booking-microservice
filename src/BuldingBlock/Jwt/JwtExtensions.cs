@@ -1,4 +1,4 @@
-using BuildingBlocks.Utils;
+using BuldingBlock.Utils;
 using Duende.IdentityServer.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;

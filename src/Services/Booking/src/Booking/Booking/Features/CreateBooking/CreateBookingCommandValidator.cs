@@ -6,11 +6,14 @@ namespace Booking.Booking.Features.CreateBooking
     {
         public CreateBookingCommandValidator()
         {
-            CascadeMode = CascadeMode.Stop;
+            RuleFor(x => x.FlightId)
+                .NotNull()
+                .WithMessage("FlightId is required!");
 
-            RuleFor(x => x.FlightId).NotNull().WithMessage("FlightId is required!");
-            RuleFor(x => x.PassengerId).NotNull().WithMessage("PassengerId is required!");
+            RuleFor(x => x.PassengerId)
+                .NotNull()
+                .WithMessage("PassengerId is required!");
         }
-    }
 
+    }
 }

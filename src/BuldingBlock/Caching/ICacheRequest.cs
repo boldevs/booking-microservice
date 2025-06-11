@@ -1,14 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace BuldingBlock.Caching
 {
     public interface ICacheRequest
     {
         string CacheKey { get; }
-        DateTime? AbsoluteExpirationRelativeToNow { get; }
-    }
 
+        /// <summary>
+        /// The relative expiration duration for the cache entry from now.
+        /// If null, default expiration time is used.
+        /// </summary>
+        TimeSpan? AbsoluteExpirationRelativeToNow { get; }
+    }
 }

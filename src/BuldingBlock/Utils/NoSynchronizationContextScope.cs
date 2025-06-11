@@ -1,23 +1,26 @@
 
 namespace BuldingBlock.Utils
 {
-    public static Disposable Enter()
+    public static class NoSynchronizationContextScope
     {
-        var context = SynchronizationContext.Current;
-        SynchronizationContext.SetSynchronizationContext(null);
-        return new Disposable(context);
-    }
-
-    public struct Disposable : IDisposable
-    {
-        private readonly SynchronizationContext? synchronizationContext;
-
-        public Disposable(SynchronizationContext? synchronizationContext)
+        public static Disposable Enter()
         {
-            this.synchronizationContext = synchronizationContext;
+            var context = SynchronizationContext.Current;
+            SynchronizationContext.SetSynchronizationContext(null);
+            return new Disposable(context);
         }
 
-        public void Dispose() =>
-            SynchronizationContext.SetSynchronizationContext(synchronizationContext);
+        public struct Disposable : IDisposable
+        {
+            private readonly SynchronizationContext? synchronizationContext;
+
+            public Disposable(SynchronizationContext? synchronizationContext)
+            {
+                this.synchronizationContext = synchronizationContext;
+            }
+
+            public void Dispose() =>
+                SynchronizationContext.SetSynchronizationContext(synchronizationContext);
+        }
     }
 }

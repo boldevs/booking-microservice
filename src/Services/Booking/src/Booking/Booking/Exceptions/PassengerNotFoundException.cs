@@ -1,4 +1,4 @@
-using BuldingBlock.Exception;;
+using BuldingBlock.Exception;
 
 namespace Booking.Booking.Exceptions
 {
