@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\BuldingBlock\BuldingBlock.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.6" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Aircrafts\Exceptions" />
+    <Folder Include="Airports\Exceptions" />
+    <Folder Include="Data\Migrations" />
+    <Folder Include="Enum" />
+    <Folder Include="Flights\Features\UpdateFlight" />
+    <Folder Include="Seats\Features\CreateSeat" />
+  </ItemGroup>
+
+</Project>
