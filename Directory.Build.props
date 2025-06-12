@@ -1,0 +1,31 @@
+<Project>
+  <ItemGroup>
+    <!-- Modern analyzers and code quality tools -->
+    <PackageReference Include="Meziantou.Analyzer" Version="1.0.752" PrivateAssets="all" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.556" PrivateAssets="all" />
+    <PackageReference Include="SonarAnalyzer.CSharp" Version="9.13.0.87593" PrivateAssets="all" />
+    <PackageReference Include="Roslynator.Analyzers" Version="3.4.0" PrivateAssets="all" />
+    <PackageReference Include="Roslynator.CodeAnalysis.Analyzers" Version="3.4.0" PrivateAssets="all" />
+    <PackageReference Include="Roslynator.Formatting.Analyzers" Version="3.4.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.8.70" PrivateAssets="all" />
+
+    <!-- Optional: Add AsyncFixer if you specifically need async/await diagnostics -->
+    <!--<PackageReference Include="AsyncFixer" Version="1.5.1" PrivateAssets="all" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- EF Core tools (for dotnet ef, migrations, scaffolding) -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.6" PrivateAssets="all">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.6" PrivateAssets="all">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <!-- Optional: Enforce latest C# analysis level -->
+  <PropertyGroup>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+</Project>
