@@ -1296,6 +1296,9 @@
           "build/_._": {}
         }
       },
+      "Meziantou.Analyzer/1.0.752": {
+        "type": "package"
+      },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2254,7 +2257,7 @@
           "System.Text.Json": "9.0.6"
         },
         "compile": {
-          "lib/net8.0/Microsoft.EntityFrameworkCore.Design.dll": {
+          "lib/net8.0/_._": {
             "related": ".xml"
           }
         },
@@ -2264,7 +2267,7 @@
           }
         },
         "build": {
-          "build/net8.0/_._": {}
+          "build/net8.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
       "Microsoft.EntityFrameworkCore.InMemory/9.0.5": {
@@ -2355,6 +2358,12 @@
           "lib/net8.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/9.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "9.0.6"
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
@@ -3342,6 +3351,12 @@
           }
         }
       },
+      "Microsoft.VisualStudio.Threading.Analyzers/17.9.28": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.VisualStudio.Threading.Analyzers.targets": {}
+        }
+      },
       "Microsoft.Win32.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3849,6 +3864,15 @@
           }
         }
       },
+      "Roslynator.Analyzers/4.0.0": {
+        "type": "package"
+      },
+      "Roslynator.CodeAnalysis.Analyzers/4.0.0": {
+        "type": "package"
+      },
+      "Roslynator.Formatting.Analyzers/4.0.0": {
+        "type": "package"
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
         "type": "package",
         "runtimeTargets": {
@@ -4349,6 +4373,9 @@
           }
         }
       },
+      "SonarAnalyzer.CSharp/9.14.0.81108": {
+        "type": "package"
+      },
       "Spectre.Console/0.45.0": {
         "type": "package",
         "dependencies": {
@@ -4495,6 +4522,15 @@
         "runtime": {
           "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
         }
+      },
+      "StyleCop.Analyzers/1.2.0-beta.556": {
+        "type": "package",
+        "dependencies": {
+          "StyleCop.Analyzers.Unstable": "1.2.0.556"
+        }
+      },
+      "StyleCop.Analyzers.Unstable/1.2.0.556": {
+        "type": "package"
       },
       "Swashbuckle.AspNetCore/8.1.4": {
         "type": "package",
@@ -6477,8 +6513,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "BuldingBlock": "1.0.0",
-          "Microsoft.EntityFrameworkCore.Design": "9.0.6"
+          "BuldingBlock": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Booking.dll": {}
@@ -6536,17 +6571,17 @@
           "Microsoft.AspNetCore.Http": "2.3.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "9.0.5",
           "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "5.1.0",
-          "Microsoft.EntityFrameworkCore": "9.0.5",
+          "Microsoft.EntityFrameworkCore": "9.0.6",
           "Microsoft.EntityFrameworkCore.InMemory": "9.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.5",
-          "Microsoft.Extensions.Configuration.Abstractions": "9.0.5",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.6",
           "Microsoft.Extensions.Configuration.Binder": "9.0.5",
-          "Microsoft.Extensions.DependencyInjection": "9.0.5",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.5",
+          "Microsoft.Extensions.DependencyInjection": "9.0.6",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.6",
           "Microsoft.Extensions.Diagnostics.HealthChecks": "9.0.5",
           "Microsoft.Extensions.Hosting": "9.0.5",
           "Microsoft.Extensions.Http.Polly": "9.0.5",
-          "Microsoft.Extensions.Logging.Abstractions": "9.0.5",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.6",
           "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
           "MongoDB.Driver": "3.4.0",
           "Moq": "4.20.72",
@@ -7948,6 +7983,21 @@
         "build/MessagePackAnalyzer.targets",
         "messagepackanalyzer.3.1.1.nupkg.sha512",
         "messagepackanalyzer.nuspec"
+      ]
+    },
+    "Meziantou.Analyzer/1.0.752": {
+      "sha512": "20+7E12h63x92TEmF9IqCcIKVt1vA31UxicHUKbHpc+Ae02E0WQ3XaL/im2znzzY3zkQjSX05vOvDl3OFri3MQ==",
+      "type": "package",
+      "path": "meziantou.analyzer/1.0.752",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "analyzers/dotnet/cs/Meziantou.Analyzer.dll",
+        "icon.png",
+        "meziantou.analyzer.1.0.752.nupkg.sha512",
+        "meziantou.analyzer.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
@@ -9638,6 +9688,31 @@
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.Tools/9.0.6": {
+      "sha512": "2Qs+OnYPOrfb5wpSXNGdm9v3QattLhou26xamaICIE9jqWAW7xdzDlY/yXRz6zKFLnzRH70IM+XXYVElEVeQ9Q==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.tools/9.0.6",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "docs/PACKAGE.md",
+        "microsoft.entityframeworkcore.tools.9.0.6.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.nuspec",
+        "tools/EntityFrameworkCore.PS2.psd1",
+        "tools/EntityFrameworkCore.PS2.psm1",
+        "tools/EntityFrameworkCore.psd1",
+        "tools/EntityFrameworkCore.psm1",
+        "tools/about_EntityFrameworkCore.help.txt",
+        "tools/init.ps1",
+        "tools/net472/any/ef.exe",
+        "tools/net472/win-arm64/ef.exe",
+        "tools/net472/win-x86/ef.exe",
+        "tools/netcoreapp2.0/any/ef.dll",
+        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
+      ]
+    },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "sha512": "Ckb5EDBUNJdFWyajfXzUIMRkhf52fHZOQuuZg/oiu8y7zDCVwD0iHhew6MnThjHmevanpxL3f5ci2TtHQEN6bw==",
       "type": "package",
@@ -11227,6 +11302,60 @@
         "microsoft.sqlserver.server.nuspec"
       ]
     },
+    "Microsoft.VisualStudio.Threading.Analyzers/17.9.28": {
+      "sha512": "hNfIadilgBXbAOmV7LCdPSmLsUILA3QZhR4Wu9VbFDaHjtU3dCFRfJMbk45galt1pfffz4yI5qT9oUJl+F8mNQ==",
+      "type": "package",
+      "path": "microsoft.visualstudio.threading.analyzers/17.9.28",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "NOTICE",
+        "PackageIcon.png",
+        "README.md",
+        "analyzers/cs/Microsoft.VisualStudio.Threading.Analyzers.CSharp.dll",
+        "analyzers/cs/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.dll",
+        "analyzers/cs/Microsoft.VisualStudio.Threading.Analyzers.dll",
+        "analyzers/cs/cs/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/cs/de/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/cs/es/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/cs/fr/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/cs/it/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/cs/ja/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/cs/ko/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/cs/pl/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/cs/pt-BR/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/cs/ru/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/cs/tr/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/cs/zh-Hans/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/cs/zh-Hant/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/vb/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.dll",
+        "analyzers/vb/Microsoft.VisualStudio.Threading.Analyzers.VisualBasic.dll",
+        "analyzers/vb/Microsoft.VisualStudio.Threading.Analyzers.dll",
+        "analyzers/vb/cs/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/vb/de/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/vb/es/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/vb/fr/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/vb/it/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/vb/ja/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/vb/ko/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/vb/pl/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/vb/pt-BR/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/vb/ru/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/vb/tr/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/vb/zh-Hans/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "analyzers/vb/zh-Hant/Microsoft.VisualStudio.Threading.Analyzers.CodeFixes.resources.dll",
+        "build/AdditionalFiles/vs-threading.LegacyThreadSwitchingMembers.txt",
+        "build/AdditionalFiles/vs-threading.MainThreadAssertingMethods.txt",
+        "build/AdditionalFiles/vs-threading.MainThreadSwitchingMethods.txt",
+        "build/AdditionalFiles/vs-threading.MembersRequiringMainThread.txt",
+        "build/Microsoft.VisualStudio.Threading.Analyzers.targets",
+        "microsoft.visualstudio.threading.analyzers.17.9.28.nupkg.sha512",
+        "microsoft.visualstudio.threading.analyzers.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
     "Microsoft.Win32.Primitives/4.3.0": {
       "sha512": "9ZQKCWxH7Ijp9BfahvL2Zyf1cJIk8XYLF6Yjzr2yi0b2cOut/HQ31qf1ThHAgCc3WiZMdnWcfJCgN82/0UunxA==",
       "type": "package",
@@ -11871,6 +12000,75 @@
         "rabbitmq.client.nuspec"
       ]
     },
+    "Roslynator.Analyzers/4.0.0": {
+      "sha512": "5/0QTvFyQ+oLqg15p9BW0c4S3XG37218/MTWy/6ez/Rxl4n8rGgs+9udWFDY+gRaA6s6f76EEtZavtQFngmxHA==",
+      "type": "package",
+      "path": "roslynator.analyzers/4.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/Roslynator.CSharp.Analyzers.CodeFixes.dll",
+        "analyzers/dotnet/cs/Roslynator.CSharp.Analyzers.dll",
+        "analyzers/dotnet/cs/Roslynator_Analyzers_Roslynator.CSharp.Workspaces.dll",
+        "analyzers/dotnet/cs/Roslynator_Analyzers_Roslynator.CSharp.dll",
+        "analyzers/dotnet/cs/Roslynator_Analyzers_Roslynator.Common.dll",
+        "analyzers/dotnet/cs/Roslynator_Analyzers_Roslynator.Core.dll",
+        "analyzers/dotnet/cs/Roslynator_Analyzers_Roslynator.Workspaces.Common.dll",
+        "analyzers/dotnet/cs/Roslynator_Analyzers_Roslynator.Workspaces.Core.dll",
+        "icon.png",
+        "roslynator.analyzers.4.0.0.nupkg.sha512",
+        "roslynator.analyzers.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Roslynator.CodeAnalysis.Analyzers/4.0.0": {
+      "sha512": "DtP+BsOfDrhSEPJ/eeOQyHJSQpFZ6rnTSyQhH0696vmk7ltVP5u+rAEKbOjnsidEyBElPxkNkdC9MbKFx5uh6Q==",
+      "type": "package",
+      "path": "roslynator.codeanalysis.analyzers/4.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/Roslynator.CodeAnalysis.Analyzers.CodeFixes.dll",
+        "analyzers/dotnet/cs/Roslynator.CodeAnalysis.Analyzers.dll",
+        "analyzers/dotnet/cs/Roslynator_CodeAnalysis_Analyzers_Roslynator.CSharp.Workspaces.dll",
+        "analyzers/dotnet/cs/Roslynator_CodeAnalysis_Analyzers_Roslynator.CSharp.dll",
+        "analyzers/dotnet/cs/Roslynator_CodeAnalysis_Analyzers_Roslynator.Common.dll",
+        "analyzers/dotnet/cs/Roslynator_CodeAnalysis_Analyzers_Roslynator.Core.dll",
+        "analyzers/dotnet/cs/Roslynator_CodeAnalysis_Analyzers_Roslynator.Workspaces.Common.dll",
+        "analyzers/dotnet/cs/Roslynator_CodeAnalysis_Analyzers_Roslynator.Workspaces.Core.dll",
+        "icon.png",
+        "roslynator.codeanalysis.analyzers.4.0.0.nupkg.sha512",
+        "roslynator.codeanalysis.analyzers.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "Roslynator.Formatting.Analyzers/4.0.0": {
+      "sha512": "RnJH++SGgN/Ng6YHCWOFcFAa/QbezKWO8nSnKdqwj1H4bHeGMAz6UiMF826R4YBIRcIEvBn78Yr5wqY7YFmoEg==",
+      "type": "package",
+      "path": "roslynator.formatting.analyzers/4.0.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/Roslynator.Formatting.Analyzers.CodeFixes.dll",
+        "analyzers/dotnet/cs/Roslynator.Formatting.Analyzers.dll",
+        "analyzers/dotnet/cs/Roslynator_Formatting_Analyzers_Roslynator.CSharp.Workspaces.dll",
+        "analyzers/dotnet/cs/Roslynator_Formatting_Analyzers_Roslynator.CSharp.dll",
+        "analyzers/dotnet/cs/Roslynator_Formatting_Analyzers_Roslynator.Common.dll",
+        "analyzers/dotnet/cs/Roslynator_Formatting_Analyzers_Roslynator.Core.dll",
+        "analyzers/dotnet/cs/Roslynator_Formatting_Analyzers_Roslynator.Workspaces.Common.dll",
+        "analyzers/dotnet/cs/Roslynator_Formatting_Analyzers_Roslynator.Workspaces.Core.dll",
+        "icon.png",
+        "roslynator.formatting.analyzers.4.0.0.nupkg.sha512",
+        "roslynator.formatting.analyzers.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "sha512": "7VSGO0URRKoMEAq0Sc9cRz8mb6zbyx/BZDEWhgPdzzpmFhkam3fJ1DAGWFXBI4nGlma+uPKpfuMQP5LXRnOH5g==",
       "type": "package",
@@ -12488,6 +12686,26 @@
         "snappier.nuspec"
       ]
     },
+    "SonarAnalyzer.CSharp/9.14.0.81108": {
+      "sha512": "+I2yx6sTKgnUHrGzF7q56dA8H7waaX4fCUhqNLTfWrg33ltHX+ZqHXb1KGs5Q8iCN648Dn6J5O/Wf8hv1uXoYQ==",
+      "type": "package",
+      "path": "sonaranalyzer.csharp/9.14.0.81108",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/Google.Protobuf.dll",
+        "analyzers/SonarAnalyzer.CFG.dll",
+        "analyzers/SonarAnalyzer.CSharp.dll",
+        "analyzers/SonarAnalyzer.dll",
+        "images/sonarsource_64.png",
+        "license/THIRD-PARTY-NOTICES.txt",
+        "sonaranalyzer.csharp.9.14.0.81108.nupkg.sha512",
+        "sonaranalyzer.csharp.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
     "Spectre.Console/0.45.0": {
       "sha512": "e//13o8/BCrWmwN26eJ4zCzD2iq7iUlqQd+nDI9nJUdnJ/rYAanYiNFZZ7YHwlv48IKuKtRYYP6/wPt1DG67ww==",
       "type": "package",
@@ -12591,6 +12809,45 @@
         "lib/netstandard2.0/SQLitePCLRaw.provider.e_sqlite3.dll",
         "sqlitepclraw.provider.e_sqlite3.2.1.6.nupkg.sha512",
         "sqlitepclraw.provider.e_sqlite3.nuspec"
+      ]
+    },
+    "StyleCop.Analyzers/1.2.0-beta.556": {
+      "sha512": "llRPgmA1fhC0I0QyFLEcjvtM2239QzKr/tcnbsjArLMJxJlu0AA5G7Fft0OI30pHF3MW63Gf4aSSsjc5m82J1Q==",
+      "type": "package",
+      "path": "stylecop.analyzers/1.2.0-beta.556",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "THIRD-PARTY-NOTICES.txt",
+        "stylecop.analyzers.1.2.0-beta.556.nupkg.sha512",
+        "stylecop.analyzers.nuspec"
+      ]
+    },
+    "StyleCop.Analyzers.Unstable/1.2.0.556": {
+      "sha512": "zvn9Mqs/ox/83cpYPignI8hJEM2A93s2HkHs8HYMOAQW0PkampyoErAiIyKxgTLqbbad29HX/shv/6LGSjPJNQ==",
+      "type": "package",
+      "path": "stylecop.analyzers.unstable/1.2.0.556",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "THIRD-PARTY-NOTICES.txt",
+        "analyzers/dotnet/cs/StyleCop.Analyzers.CodeFixes.dll",
+        "analyzers/dotnet/cs/StyleCop.Analyzers.dll",
+        "analyzers/dotnet/cs/de-DE/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/en-GB/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/es-MX/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/fr-FR/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/pl-PL/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/pt-BR/StyleCop.Analyzers.resources.dll",
+        "analyzers/dotnet/cs/ru-RU/StyleCop.Analyzers.resources.dll",
+        "rulesets/StyleCopAnalyzersDefault.ruleset",
+        "stylecop.analyzers.unstable.1.2.0.556.nupkg.sha512",
+        "stylecop.analyzers.unstable.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
       ]
     },
     "Swashbuckle.AspNetCore/8.1.4": {
@@ -17251,7 +17508,16 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "Booking >= 1.0.0",
-      "Microsoft.AspNetCore.OpenApi >= 9.0.2"
+      "Meziantou.Analyzer >= 1.0.752",
+      "Microsoft.AspNetCore.OpenApi >= 9.0.2",
+      "Microsoft.EntityFrameworkCore.Design >= 9.0.6",
+      "Microsoft.EntityFrameworkCore.Tools >= 9.0.6",
+      "Microsoft.VisualStudio.Threading.Analyzers >= 17.8.70",
+      "Roslynator.Analyzers >= 3.4.0",
+      "Roslynator.CodeAnalysis.Analyzers >= 3.4.0",
+      "Roslynator.Formatting.Analyzers >= 3.4.0",
+      "SonarAnalyzer.CSharp >= 9.13.0.87593",
+      "StyleCop.Analyzers >= 1.2.0-beta.556"
     ]
   },
   "packageFolders": {
@@ -17312,9 +17578,56 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
+          "Meziantou.Analyzer": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[1.0.752, )"
+          },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[9.0.2, )"
+          },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[9.0.6, )"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[9.0.6, )"
+          },
+          "Microsoft.VisualStudio.Threading.Analyzers": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[17.8.70, )"
+          },
+          "Roslynator.Analyzers": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.4.0, )"
+          },
+          "Roslynator.CodeAnalysis.Analyzers": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.4.0, )"
+          },
+          "Roslynator.Formatting.Analyzers": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.4.0, )"
+          },
+          "SonarAnalyzer.CSharp": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[9.13.0.87593, )"
+          },
+          "StyleCop.Analyzers": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[1.2.0-beta.556, )"
           }
         },
         "imports": [
@@ -17341,6 +17654,56 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Booking.Api depends on Microsoft.VisualStudio.Threading.Analyzers (>= 17.8.70) but Microsoft.VisualStudio.Threading.Analyzers 17.8.70 was not found. Microsoft.VisualStudio.Threading.Analyzers 17.9.28 was resolved instead.",
+      "libraryId": "Microsoft.VisualStudio.Threading.Analyzers",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Booking.Api depends on Roslynator.Analyzers (>= 3.4.0) but Roslynator.Analyzers 3.4.0 was not found. Roslynator.Analyzers 4.0.0 was resolved instead.",
+      "libraryId": "Roslynator.Analyzers",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Booking.Api depends on Roslynator.CodeAnalysis.Analyzers (>= 3.4.0) but Roslynator.CodeAnalysis.Analyzers 3.4.0 was not found. Roslynator.CodeAnalysis.Analyzers 4.0.0 was resolved instead.",
+      "libraryId": "Roslynator.CodeAnalysis.Analyzers",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Booking.Api depends on Roslynator.Formatting.Analyzers (>= 3.4.0) but Roslynator.Formatting.Analyzers 3.4.0 was not found. Roslynator.Formatting.Analyzers 4.0.0 was resolved instead.",
+      "libraryId": "Roslynator.Formatting.Analyzers",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Booking.Api depends on SonarAnalyzer.CSharp (>= 9.13.0.87593) but SonarAnalyzer.CSharp 9.13.0.87593 was not found. SonarAnalyzer.CSharp 9.14.0.81108 was resolved instead.",
+      "libraryId": "SonarAnalyzer.CSharp",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
     {
       "code": "NU1608",
       "level": "Warning",

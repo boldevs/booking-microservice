@@ -36,13 +36,6 @@ namespace BuldingBlock.CAP
                 };
                 x.JsonSerializerOptions.Encoder = JavaScriptEncoder.Create(UnicodeRanges.All);
             });
-
-            // services.AddOpenTelemetryTracing((builder) => builder
-            //     .AddAspNetCoreInstrumentation()
-            //     .AddCapInstrumentation()
-            //     .AddZipkinExporter()
-            // );
-
             services.Scan(s =>
                 s.FromAssemblies(AppDomain.CurrentDomain.GetAssemblies())
                     .AddClasses(c => c.AssignableTo(typeof(ICapSubscribe)))
@@ -52,5 +45,4 @@ namespace BuldingBlock.CAP
             return services;
         }
     }
-
 }

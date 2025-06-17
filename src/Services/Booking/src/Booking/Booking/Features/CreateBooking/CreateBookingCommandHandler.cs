@@ -10,7 +10,6 @@ using MapsterMapper;
 using MediatR;
 using Microsoft.Extensions.Options;
 
-
 namespace Booking.Booking.Features.CreateBooking
 {
     public class CreateBookingCommandHandler : IRequestHandler<CreateBookingCommand, ulong>
@@ -18,7 +17,6 @@ namespace Booking.Booking.Features.CreateBooking
         private readonly IEventStoreDBRepository<Models.Booking> _eventStoreDbRepository;
         private readonly IFlightGrpcService _flightGrpcService;
         private readonly IPassengerGrpcService _passengerGrpcService;
-
 
         public CreateBookingCommandHandler(
             IOptions<GrpcOptions> grpcOptions,

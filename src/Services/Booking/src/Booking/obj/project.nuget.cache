@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uSrbe8h8p3c=",
+  "dgSpecHash": "xydLD03gh4I=",
   "success": true,
   "projectFilePath": "D:\\Personal Improvments\\dotnet-ecosystem\\projects\\booking-microservice\\src\\Services\\Booking\\src\\Booking\\Booking.csproj",
   "expectedPackageFiles": [
@@ -81,6 +81,7 @@
     "C:\\Users\\Vibol\\.nuget\\packages\\messagepack\\3.1.1\\messagepack.3.1.1.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\messagepack.annotations\\3.1.1\\messagepack.annotations.3.1.1.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\messagepackanalyzer\\3.1.1\\messagepackanalyzer.3.1.1.nupkg.sha512",
+    "C:\\Users\\Vibol\\.nuget\\packages\\meziantou.analyzer\\1.0.752\\meziantou.analyzer.1.0.752.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.5\\microsoft.aspnetcore.authentication.jwtbearer.9.0.5.nupkg.sha512",
@@ -127,6 +128,7 @@
     "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\8.0.11\\microsoft.entityframeworkcore.sqlite.8.0.11.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\8.0.11\\microsoft.entityframeworkcore.sqlite.core.8.0.11.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\9.0.5\\microsoft.entityframeworkcore.sqlserver.9.0.5.nupkg.sha512",
+    "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\9.0.6\\microsoft.entityframeworkcore.tools.9.0.6.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.6\\microsoft.extensions.caching.abstractions.9.0.6.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.6\\microsoft.extensions.caching.memory.9.0.6.nupkg.sha512",
@@ -180,6 +182,7 @@
     "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.openapi\\1.6.23\\microsoft.openapi.1.6.23.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.visualstudio.threading.analyzers\\17.9.28\\microsoft.visualstudio.threading.analyzers.17.9.28.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\mongodb.bson\\3.4.0\\mongodb.bson.3.4.0.nupkg.sha512",
@@ -209,6 +212,9 @@
     "C:\\Users\\Vibol\\.nuget\\packages\\protobuf-net.grpc\\1.2.2\\protobuf-net.grpc.1.2.2.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\protobuf-net.grpc.aspnetcore\\1.2.2\\protobuf-net.grpc.aspnetcore.1.2.2.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\rabbitmq.client\\7.1.2\\rabbitmq.client.7.1.2.nupkg.sha512",
+    "C:\\Users\\Vibol\\.nuget\\packages\\roslynator.analyzers\\4.0.0\\roslynator.analyzers.4.0.0.nupkg.sha512",
+    "C:\\Users\\Vibol\\.nuget\\packages\\roslynator.codeanalysis.analyzers\\4.0.0\\roslynator.codeanalysis.analyzers.4.0.0.nupkg.sha512",
+    "C:\\Users\\Vibol\\.nuget\\packages\\roslynator.formatting.analyzers\\4.0.0\\roslynator.formatting.analyzers.4.0.0.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
@@ -245,11 +251,14 @@
     "C:\\Users\\Vibol\\.nuget\\packages\\serilog.sinks.spectreconsole\\0.3.3\\serilog.sinks.spectreconsole.0.3.3.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\snappier\\1.0.0\\snappier.1.0.0.nupkg.sha512",
+    "C:\\Users\\Vibol\\.nuget\\packages\\sonaranalyzer.csharp\\9.14.0.81108\\sonaranalyzer.csharp.9.14.0.81108.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\spectre.console\\0.45.0\\spectre.console.0.45.0.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.6\\sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\sqlitepclraw.core\\2.1.6\\sqlitepclraw.core.2.1.6.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.6\\sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.6\\sqlitepclraw.provider.e_sqlite3.2.1.6.nupkg.sha512",
+    "C:\\Users\\Vibol\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.556\\stylecop.analyzers.1.2.0-beta.556.nupkg.sha512",
+    "C:\\Users\\Vibol\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.556\\stylecop.analyzers.unstable.1.2.0.556.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\swashbuckle.aspnetcore\\8.1.4\\swashbuckle.aspnetcore.8.1.4.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\8.1.4\\swashbuckle.aspnetcore.annotations.8.1.4.nupkg.sha512",
     "C:\\Users\\Vibol\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\8.1.4\\swashbuckle.aspnetcore.swagger.8.1.4.nupkg.sha512",
@@ -356,6 +365,56 @@
     "C:\\Users\\Vibol\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Booking depends on Microsoft.VisualStudio.Threading.Analyzers (>= 17.8.70) but Microsoft.VisualStudio.Threading.Analyzers 17.8.70 was not found. Microsoft.VisualStudio.Threading.Analyzers 17.9.28 was resolved instead.",
+      "libraryId": "Microsoft.VisualStudio.Threading.Analyzers",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Booking depends on Roslynator.Analyzers (>= 3.4.0) but Roslynator.Analyzers 3.4.0 was not found. Roslynator.Analyzers 4.0.0 was resolved instead.",
+      "libraryId": "Roslynator.Analyzers",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Booking depends on Roslynator.CodeAnalysis.Analyzers (>= 3.4.0) but Roslynator.CodeAnalysis.Analyzers 3.4.0 was not found. Roslynator.CodeAnalysis.Analyzers 4.0.0 was resolved instead.",
+      "libraryId": "Roslynator.CodeAnalysis.Analyzers",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Booking depends on Roslynator.Formatting.Analyzers (>= 3.4.0) but Roslynator.Formatting.Analyzers 3.4.0 was not found. Roslynator.Formatting.Analyzers 4.0.0 was resolved instead.",
+      "libraryId": "Roslynator.Formatting.Analyzers",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Booking depends on SonarAnalyzer.CSharp (>= 9.13.0.87593) but SonarAnalyzer.CSharp 9.13.0.87593 was not found. SonarAnalyzer.CSharp 9.14.0.81108 was resolved instead.",
+      "libraryId": "SonarAnalyzer.CSharp",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    },
     {
       "code": "NU1608",
       "level": "Warning",

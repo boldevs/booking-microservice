@@ -1,4 +1,3 @@
-
 namespace BuldingBlock.Domain.Model
 {
     public interface IEntity

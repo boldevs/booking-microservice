@@ -64,7 +64,6 @@ if (app.Environment.IsDevelopment())
     app.UseCustomSwagger(provider);
 }
 
-
 app.UseSerilogRequestLogging();
 app.UseMigrations(env);
 app.UseCorrelationId();

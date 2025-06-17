@@ -10,7 +10,8 @@ namespace BuldingBlock.EventStoreDB.Events
             long id,
             CancellationToken cancellationToken,
             ulong? fromVersion = null
-        ) where T : class, IProjection
+        )
+        where T : class, IProjection
         {
             var readResult = eventStore.ReadStreamAsync(
                 Direction.Forwards,
@@ -20,6 +21,7 @@ namespace BuldingBlock.EventStoreDB.Events
             );
 
             // TODO: consider adding extension method for the aggregation and deserialisation
+
             var aggregate = (T)Activator.CreateInstance(typeof(T), true)!;
 
             if (await readResult.ReadState == ReadState.StreamNotFound)

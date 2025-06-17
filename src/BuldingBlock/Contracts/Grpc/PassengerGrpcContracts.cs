@@ -8,7 +8,6 @@ public interface IPassengerGrpcService : IService<IPassengerGrpcService>
     UnaryResult<PassengerResponseDto> GetById(long id);
 }
 
-
 [MessagePackObject]
 public class PassengerResponseDto
 {

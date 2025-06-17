@@ -3,14 +3,12 @@ using MessagePack;
 
 namespace BuldingBlock.Contracts.Grpc;
 
-
     public interface IFlightGrpcService : IService<IFlightGrpcService>
     {
         UnaryResult<FlightResponseDto> GetById(long id);
         UnaryResult<IEnumerable<SeatResponseDto>> GetAvailableSeats(long flightId);
         UnaryResult<FlightResponseDto> ReserveSeat(ReserveSeatRequestDto request);
     }
-
 
     [MessagePackObject]
     public class ReserveSeatRequestDto
@@ -84,4 +82,3 @@ namespace BuldingBlock.Contracts.Grpc;
         Business,
         Economy
     }
-

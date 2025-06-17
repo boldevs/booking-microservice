@@ -1,4 +1,3 @@
-
 namespace BuldingBlock.Domain.Event
 {
     [Flags]
@@ -7,5 +6,4 @@ namespace BuldingBlock.Domain.Event
         IntegrationEvent = 1,
         DomainEvent = 2,
     }
-
 }

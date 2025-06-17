@@ -24,6 +24,7 @@ namespace BuldingBlock.EventStoreDB.BackgroundWorkers
                 logger.LogInformation("Background worker stopped");
                 await perform(stoppingToken);
                 logger.LogInformation("Background worker stopped");
-            }, stoppingToken);
+            },
+            stoppingToken);
     }
 }
