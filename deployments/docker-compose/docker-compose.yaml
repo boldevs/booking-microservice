@@ -1,9 +1,9 @@
 version: "3.3"
 services:
 
-    #######################################################
-    #  Gateway
-    #######################################################
+  #######################################################
+  #  Gateway
+  #######################################################
   gateway:
     image: gateway
     build:
@@ -13,30 +13,28 @@ services:
       dockerfile: src/ApiGateway/Dockerfile
     container_name: booking-gateway
     ports:
-      - "5001:80"
-      - "5000:443"
+      - "5000:80"   # HTTP
+      - "5001:443"  # HTTPS
     depends_on:
       - db
       - rabbitmq
-      # - mongo
     links:
       - db
       - rabbitmq
-      # - mongo
     volumes:
-        - '${USERPROFILE}\.aspnet\https:/https/'
+      - '${USERPROFILE}\.aspnet\https:/https/'
     environment:
-        - 'ASPNETCORE_URLS=https://+;http://+'
-        - ASPNETCORE_HTTPS_PORT=5001
-        - ASPNETCORE_Kestrel__Certificates__Default__Password=password
-        - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - 'ASPNETCORE_URLS=https://+;http://+'
+      - ASPNETCORE_HTTPS_PORT=5001
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ASPNETCORE_ENVIRONMENT=docker
     networks:
       - booking
 
-
-    #######################################################
-    #  Flight
-    #######################################################
+  #######################################################
+  #  Flight
+  #######################################################
   flight:
     image: flight
     build:
@@ -46,26 +44,24 @@ services:
       dockerfile: src/Services/Flight/Dockerfile
     container_name: flight
     ports:
-      - 5004:80
-      - 5003:443
+      - "5004:80"
+      - "5003:443"
     depends_on:
       - db
       - rabbitmq
-      # - mongo
     volumes:
-        - '${USERPROFILE}\.aspnet\https:/https/'
+      - '${USERPROFILE}\.aspnet\https:/https/'
     environment:
-        - 'ASPNETCORE_URLS=https://+;http://+'
-        - ASPNETCORE_HTTPS_PORT=5003
-        - ASPNETCORE_Kestrel__Certificates__Default__Password=password
-        - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - 'ASPNETCORE_URLS=https://+;http://+'
+      - ASPNETCORE_HTTPS_PORT=5003
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
     networks:
       - booking
 
-
-    #######################################################
-    #  Identity
-    #######################################################
+  #######################################################
+  #  Identity
+  #######################################################
   identity:
     image: identity
     build:
@@ -75,30 +71,27 @@ services:
       dockerfile: src/Services/Identity/Dockerfile
     container_name: identity
     ports:
-      - 6005:80
-      - 5005:443
+      - "6005:80"
+      - "5005:443"
     depends_on:
       - db
       - rabbitmq
-      # - mongo
     links:
       - db
       - rabbitmq
-      # - mongo
     volumes:
-        - '${USERPROFILE}\.aspnet\https:/https/'
+      - '${USERPROFILE}\.aspnet\https:/https/'
     environment:
-        - 'ASPNETCORE_URLS=https://+;http://+'
-        - ASPNETCORE_HTTPS_PORT=5005
-        - ASPNETCORE_Kestrel__Certificates__Default__Password=password
-        - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - 'ASPNETCORE_URLS=https://+;http://+'
+      - ASPNETCORE_HTTPS_PORT=5005
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
     networks:
       - booking
 
-
-    #######################################################
-    #  Passenger
-    #######################################################
+  #######################################################
+  #  Passenger
+  #######################################################
   passenger:
     image: passenger
     build:
@@ -108,30 +101,27 @@ services:
       dockerfile: src/Services/Passenger/Dockerfile
     container_name: passenger
     ports:
-      - 6012:80
-      - 5012:443
+      - "6012:80"
+      - "5012:443"
     depends_on:
       - db
       - rabbitmq
-      # - mongo
     links:
       - db
       - rabbitmq
-      # - mongo
     volumes:
-        - '${USERPROFILE}\.aspnet\https:/https/'
+      - '${USERPROFILE}\.aspnet\https:/https/'
     environment:
-        - 'ASPNETCORE_URLS=https://+;http://+'
-        - ASPNETCORE_HTTPS_PORT=5012
-        - ASPNETCORE_Kestrel__Certificates__Default__Password=password
-        - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - 'ASPNETCORE_URLS=https://+;http://+'
+      - ASPNETCORE_HTTPS_PORT=5012
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
     networks:
       - booking
 
-
-    #######################################################
-    #  Booking
-    #######################################################
+  #######################################################
+  #  Booking
+  #######################################################
   booking:
     image: booking
     build:
@@ -141,26 +131,23 @@ services:
       dockerfile: src/Services/Booking/Dockerfile
     container_name: booking
     ports:
-      - 6010:80
-      - 5010:443
+      - "6010:80"
+      - "5010:443"
     depends_on:
       - db
       - rabbitmq
-      # - mongo
     links:
       - db
       - rabbitmq
-      # - mongo
     volumes:
-        - '${USERPROFILE}\.aspnet\https:/https/'
+      - '${USERPROFILE}\.aspnet\https:/https/'
     environment:
-        - 'ASPNETCORE_URLS=https://+;http://+'
-        - ASPNETCORE_HTTPS_PORT=5010
-        - ASPNETCORE_Kestrel__Certificates__Default__Password=password
-        - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - 'ASPNETCORE_URLS=https://+;http://+'
+      - ASPNETCORE_HTTPS_PORT=5010
+      - ASPNETCORE_Kestrel__Certificates__Default__Password=password
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
     networks:
       - booking
-
 
 networks:
   booking:
@@ -169,4 +156,3 @@ networks:
 volumes:
   db-data:
     external: false
-

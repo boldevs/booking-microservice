@@ -10,7 +10,7 @@ namespace Booking.Extensions
     {
         public static IServiceCollection AddCustomMediatR(this IServiceCollection services)
         {
-            services.AddMediatR(typeof(BookingRoot).Assembly);
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<BookingRoot>());
             services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
             services.AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
             services.AddScoped(typeof(IPipelineBehavior<,>), typeof(EfTxBehavior<,>));

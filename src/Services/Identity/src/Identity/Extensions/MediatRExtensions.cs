@@ -10,11 +10,12 @@ public static class MediatRExtensions
 {
     public static IServiceCollection AddCustomMediatR(this IServiceCollection services)
     {
-        services.AddMediatR(typeof(IdentityRoot).Assembly);
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<IdentityRoot>());
         services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
         services.AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
         services.AddScoped(typeof(IPipelineBehavior<,>), typeof(EfIdentityTxBehavior<,>));
 
         return services;
     }
+
 }

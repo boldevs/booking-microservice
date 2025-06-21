@@ -11,7 +11,7 @@ public static class MediatRExtensions
 {
     public static IServiceCollection AddCustomMediatR(this IServiceCollection services)
     {
-        services.AddMediatR(typeof(FlightRoot).Assembly);
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<FlightRoot>());
         services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
         services.AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
         services.AddScoped(typeof(IPipelineBehavior<,>), typeof(EfTxBehavior<,>));
@@ -19,4 +19,5 @@ public static class MediatRExtensions
 
         return services;
     }
+
 }
