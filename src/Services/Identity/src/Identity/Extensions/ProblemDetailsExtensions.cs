@@ -1,6 +1,7 @@
 using System;
 using BuldingBlock.Exception;
 using Hellang.Middleware.ProblemDetails;
+using Identity.Identity.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
@@ -77,6 +78,13 @@ public static class ProblemDetailsExtensions
                 };
 
                 return pd;
+            });
+            x.Map<LoginUserException>(ex => new ProblemDetails
+            {
+                Title = "Login failed",
+                Status = (int)ex.StatusCode,
+                Detail = ex.Message,
+                Type = "https://somedomain/login-error"
             });
             x.MapToStatusCode<ArgumentNullException>(StatusCodes.Status400BadRequest);
         });

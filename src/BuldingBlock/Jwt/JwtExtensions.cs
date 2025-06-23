@@ -1,6 +1,7 @@
 using BuldingBlock.Utils;
 using Duende.IdentityServer.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BuldingBlock.Jwt
@@ -21,16 +22,24 @@ namespace BuldingBlock.Jwt
             if (!string.IsNullOrEmpty(jwtOptions.Audience))
             {
                 services.AddAuthorization(options =>
+                {
+                    // Set the default policy for all [Authorize] attributes.
+                    // This is a critical security enhancement.
+                    options.DefaultPolicy = new AuthorizationPolicyBuilder()
+                        .RequireAuthenticatedUser()
+                        .RequireClaim("scope", jwtOptions.Audience)
+                        .Build();
+
+                    // You can keep the named policy as well for specific use cases.
                     options.AddPolicy(nameof(ApiScope), policy =>
                     {
                         policy.RequireAuthenticatedUser();
                         policy.RequireClaim("scope", jwtOptions.Audience);
-                    })
-                );
+                    });
+                });
             }
 
             return services;
         }
     }
-
 }

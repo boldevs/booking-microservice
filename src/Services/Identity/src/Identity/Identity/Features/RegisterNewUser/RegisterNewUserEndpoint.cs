@@ -1,5 +1,6 @@
 using System.Threading;
 using System.Threading.Tasks;
+using BuldingBlock.Web;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +10,7 @@ namespace Identity.Identity.Features.RegisterNewUser;
 
 [Route("identity/register-user")]
 [ApiController]
-public class LoginEndpoint : ControllerBase
+public class LoginEndpoint : BaseController
 {
     private readonly IMediator _mediator;
 

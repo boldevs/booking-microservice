@@ -48,7 +48,7 @@ builder.Services.AddTransient<IBusPublisher, BusPublisher>();
 
 builder.Services.AddCustomMassTransit(typeof(IdentityRoot).Assembly, env);
 builder.Services.AddCustomOpenTelemetry();
-
+builder.Services.AddHttpClient();
 builder.Services.AddIdentityServer(env);
 
 var app = builder.Build();

@@ -19,7 +19,6 @@ public class GetFlightByIdEndpoint: BaseController
     [SwaggerOperation(Summary = "Get flight by id", Description = "Get flight by id")]
     public async Task<ActionResult> GetById([FromRoute] GetFlightByIdQuery query, CancellationToken cancellationToken)
     {
-        throw new Exception();
         var result = await Mediator.Send(query, cancellationToken);
 
         return Ok(result);

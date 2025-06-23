@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace BuldingBlock.Web
 {
-    [Route(BaseApiPath)]
+   // [Route(BaseApiPath)]
     [ApiController]
     [ApiVersion("1.0")]
     public abstract class BaseController : ControllerBase

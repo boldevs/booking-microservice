@@ -4,10 +4,13 @@ using Booking.Booking.Models.ValueObjects;
 using Booking.Configuration;
 using BuldingBlock.Contracts.Grpc;
 using BuldingBlock.EventStoreDB.Repository;
+using BuldingBlock.Exception;
+using Grpc.Core.Interceptors;
 using Grpc.Net.Client;
 using MagicOnion.Client;
 using MapsterMapper;
 using MediatR;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 
 namespace Booking.Booking.Features.CreateBooking
@@ -20,15 +23,18 @@ namespace Booking.Booking.Features.CreateBooking
 
         public CreateBookingCommandHandler(
             IOptions<GrpcOptions> grpcOptions,
-            IEventStoreDBRepository<Models.Booking> eventStoreDbRepository)
+            IEventStoreDBRepository<Models.Booking> eventStoreDbRepository,
+            IHttpContextAccessor httpContextAccessor)
         {
             _eventStoreDbRepository = eventStoreDbRepository;
 
             var channelFlight = GrpcChannel.ForAddress(grpcOptions.Value.FlightAddress);
-            _flightGrpcService = new Lazy<IFlightGrpcService>(() => MagicOnionClient.Create<IFlightGrpcService>(channelFlight)).Value;
+            var invoker = channelFlight.CreateCallInvoker().Intercept(new GrpcAuthInterceptor(httpContextAccessor));
+            _flightGrpcService = MagicOnionClient.Create<IFlightGrpcService>(invoker);
 
             var channelPassenger = GrpcChannel.ForAddress(grpcOptions.Value.PassengerAddress);
-            _passengerGrpcService = new Lazy<IPassengerGrpcService>(() => MagicOnionClient.Create<IPassengerGrpcService>(channelPassenger)).Value;
+            var invokerPassenger = channelPassenger.CreateCallInvoker().Intercept(new GrpcAuthInterceptor(httpContextAccessor));
+            _passengerGrpcService = MagicOnionClient.Create<IPassengerGrpcService>(invokerPassenger);
         }
 
         public async Task<ulong> Handle(CreateBookingCommand command,

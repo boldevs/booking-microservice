@@ -5,6 +5,7 @@ using Booking.Extensions;
 using BuldingBlock.Domain;
 using BuldingBlock.EFCore;
 using BuldingBlock.EventStoreDB;
+using BuldingBlock.Exception; // Added for GrpcAuthInterceptor
 using BuldingBlock.IdsGenerator;
 using BuldingBlock.Jwt;
 using BuldingBlock.Logging;
@@ -47,12 +48,14 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddTransient<IEventMapper, EventMapper>();
 builder.Services.AddTransient<IBusPublisher, BusPublisher>();
 
+// Register the interceptor for dependency injection
+builder.Services.AddScoped<GrpcAuthInterceptor>();
+
 builder.Services.AddCustomMassTransit(typeof(BookingRoot).Assembly, env);
 builder.Services.AddCustomOpenTelemetry();
 builder.Services.AddTransient<AuthHeaderHandler>();
 SnowFlakIdGenerator.Configure(3);
 
-// EventStoreDB Configuration
 builder.Services.AddEventStore(configuration, typeof(BookingRoot).Assembly)
     .AddEventStoreDBSubscriptionToAll();
 
