@@ -3,12 +3,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using Identity.Identity.Dtos;
+using BuldingBlock.Web;
 
 namespace Identity.Identity.Features.Login;
 
 [Route("identity/login")]
 [ApiController]
-public class LoginEndpoint : ControllerBase
+public class LoginEndpoint : BaseController
 {
     private readonly IMediator _mediator;
 
