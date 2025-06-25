@@ -6,7 +6,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace Booking.Booking.Features.CreateBooking
 {
-    [Route(BaseApiPath + "/booking")]
+    [Route("/booking")]
     public class CreateBookingEndpoint : BaseController
     {
         [HttpPost]

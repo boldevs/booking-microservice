@@ -6,7 +6,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace Passenger.Passengers.Features.GetPassengerById;
 
-[Route(BaseApiPath + "/passenger")]
+[Route("/passenger")]
 public class GetPassengerByIdEndpoint : BaseController
 {
     [HttpGet("{id}")]

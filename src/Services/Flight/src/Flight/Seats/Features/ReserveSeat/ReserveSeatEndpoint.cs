@@ -8,7 +8,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace Flight.Seats.Features.ReserveSeat;
 
-[Route(BaseApiPath + "/flight/reserve-seat")]
+[Route("/flight/reserve-seat")]
 public class ReserveSeatEndpoint : BaseController
 {
     [Authorize]

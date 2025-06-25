@@ -6,7 +6,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace Passenger.Passengers.Features.CompleteRegisterPassenger;
 
-[Route(BaseApiPath + "/passenger/complete-registration")]
+[Route("/passenger/complete-registration")]
 public class CompleteRegisterPassengerEndpoint : BaseController
 {
     [Authorize]

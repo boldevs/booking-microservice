@@ -10,7 +10,6 @@ namespace BuldingBlock.Web
     [ApiVersion("1.0")]
     public abstract class BaseController : ControllerBase
     {
-        protected const string BaseApiPath = "api/v{version:apiVersion}";
         private IMapper _mapper;
 
         private IMediator _mediator;

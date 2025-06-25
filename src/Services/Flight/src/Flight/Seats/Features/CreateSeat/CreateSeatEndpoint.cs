@@ -8,7 +8,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace Flight.Seats.Features.CreateSeat;
 
-[Route(BaseApiPath + "/flight/seat")]
+[Route("/flight/seat")]
 public class CreateSeatEndpoint : BaseController
 {
     [HttpPost]

@@ -7,7 +7,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace Flight.Airports.Features.CreateAirport;
 
-[Route(BaseApiPath + "/flight/airport")]
+[Route("/flight/airport")]
 public class CreateAirportEndpoint : BaseController
 {
     [HttpPost]

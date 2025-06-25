@@ -8,7 +8,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace Flight.Seats.Features.GetAvailableSeats;
 
-[Route(BaseApiPath + "/flight/get-available-seats")]
+[Route("/flight/get-available-seats")]
 public class GetAvailableSeatsEndpoint : BaseController
 {
     [Authorize]
